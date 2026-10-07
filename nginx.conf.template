@@ -5,7 +5,7 @@ http {
     server {
         listen ${NGINX_PORT};
 
-        # ===== پنل وب x-ui =====
+        # ===== پنل x-ui =====
         location ${PANEL_PATH} {
             proxy_pass https://127.0.0.1:${PANEL_PORT}${PANEL_PATH};
             proxy_ssl_verify off;
@@ -50,7 +50,6 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
         }
         location /in2 {
             proxy_pass http://127.0.0.1:${INBOUND_PORT_2};
@@ -60,7 +59,6 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
         }
         location /in3 {
             proxy_pass http://127.0.0.1:${INBOUND_PORT_3};
@@ -70,7 +68,6 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
         }
         location /in4 {
             proxy_pass http://127.0.0.1:${INBOUND_PORT_4};
@@ -80,7 +77,6 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
         }
         location /in5 {
             proxy_pass http://127.0.0.1:${INBOUND_PORT_5};
@@ -90,7 +86,6 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
         }
         location /in6 {
             proxy_pass http://127.0.0.1:${INBOUND_PORT_6};
@@ -100,7 +95,6 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
         }
         location /in7 {
             proxy_pass http://127.0.0.1:${INBOUND_PORT_7};
@@ -110,7 +104,6 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
         }
         location /in8 {
             proxy_pass http://127.0.0.1:${INBOUND_PORT_8};
@@ -120,7 +113,6 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
         }
         location /in9 {
             proxy_pass http://127.0.0.1:${INBOUND_PORT_9};
@@ -130,7 +122,6 @@ http {
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
 }
